@@ -3,9 +3,9 @@
 
 - The system ingests resumes in multiple formats, including .pdf, .docx, .png, and .jpg.
 
--It uses a hybrid parsing strategy: PyMuPDF for efficient text extraction from text-based PDFs, python-docx for Word documents, and Google's Tesseract-OCR engine (via pytesseract) for image-based documents.
+- It uses a hybrid parsing strategy: PyMuPDF for efficient text extraction from text-based PDFs, python-docx for Word documents, and Google's Tesseract-OCR engine (via pytesseract) for image-based documents.
 
-=A specialized Gemini agent then receives the extracted raw text. This agent uses a few-shot prompt containing curated examples to reliably parse the text into a structured JSON object, which is validated against a strict Pydantic model.
+- A specialized Gemini agent then receives the extracted raw text. This agent uses a few-shot prompt containing curated examples to reliably parse the text into a structured JSON object, which is validated against a strict Pydantic model.
 
 #### Agentic Title Inference:
 
