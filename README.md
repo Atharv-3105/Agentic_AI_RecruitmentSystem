@@ -52,27 +52,18 @@
 
 - Get Report: GET /v1/reports/{screening_id} to retrieve the final, human-readable report.
 
----
+--
+## Tech Stack
+- Backend: Python, FastAPI
 
-## 🏗️ System Architecture
-- The application is built on a decoupled frontend-backend architecture, ensuring scalability and separation of concerns.
+- AI Agents: Google Gemini Pro & Flash
 
-+------------------------+        +--------------------------+        +---------------------+
-|   Frontend             |        |      Backend API         |        |     AI & Data       |
-|  (Streamlit)           |        |       (FastAPI)          |        |       (Google AI)   |
-+------------------------+        +--------------------------+        +---------------------+
-| - File Uploads         |        | - /v1/resumes (POST)     |        | - Gemini LLM        |
-| - Screening Dashboard  |  <-->  | - /v1/jds/... (POST)     |  <-->  | - Embedding Models  |
-| - Report Viewer        |        | - /v1/screen (POST)      |        +---------------------+
-+------------------------+        | - /v1/reports/{id} (GET) |                  ^
-                                  +--------------------------+                  |
-                                               |                                |
-                                               v                                |
-                                  +--------------------------+                  |
-                                  |     Agent Orchestrator   |------------------+
-                                  +--------------------------+
-                                               |
-                                               v
-                                  +--------------------------+
-                                  |    Database (MongoDB)    |
-                                  +--------------------------+
+- Database: MongoDB
+
+- Frontend: Streamlit
+
+- Core Libraries: Pydantic, LangChain (components), PyMongo, PyMuPDF, Pytesseract, Requests
+
+-- 
+
+
