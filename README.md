@@ -52,7 +52,7 @@
 
 - Get Report: GET /v1/reports/{screening_id} to retrieve the final, human-readable report.
 
---
+---
 ## Tech Stack
 - Backend: Python, FastAPI
 
@@ -64,6 +64,6 @@
 
 - Core Libraries: Pydantic, LangChain (components), PyMongo, PyMuPDF, Pytesseract, Requests
 
--- 
+---
 
 
